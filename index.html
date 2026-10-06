@@ -1,191 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kreena Tattoo Studio | Custom Tattoos, Fine Line and Blackwork</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #000000;
-            color: #ffffff;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: #ffffff;
-        }
-        .logo span {
-            color: #ff0000;
-        }
-        nav a {
-            color: #cccccc;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ff0000;
-        }
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle, #1a0000 0%, #000000 70%);
-        }
-        .section {
-            padding: 100px 50px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-bottom: 1px solid #111;
-            scroll-margin-top: 80px; /* Isse header ke peeche text nahi chhipega */
-        }
-        h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        h2 span {
-            color: #ff0000;
-        }
-        .subtitle {
-            color: #888;
-            margin-bottom: 50px;
-            font-size: 16px;
-        }
-        .cards-container {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .card {
-            background: #0a0a0a;
-            border: 1px solid #222;
-            border-radius: 12px;
-            padding: 40px 30px;
-            width: 320px;
-            transition: 0.3s;
-        }
-        .card:hover {
-            border-color: #ff0000;
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        .card p {
-            color: #aaa;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #555;
-            background: #050505;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Kreena Tattoo Studio - Custom Tattoos, Fine Line and Blackwork">
+
+  <title>Kreena Tattoo Studio | Ink Your Story</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid #292929;
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+
+      padding: 16px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d7192d;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #bbbbbb;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d7192d;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 120px 20px 70px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #461017 0%,
+          #1c090c 35%,
+          #080808 72%
+        );
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .small-title {
+      color: #d7192d;
+      font-weight: bold;
+      letter-spacing: 5px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 11vw, 95px);
+      line-height: 0.95;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+    }
+
+    .hero h1 span {
+      color: #d7192d;
+    }
+
+    .hero-description {
+      color: #aaaaaa;
+
+      max-width: 650px;
+
+      margin: 25px auto;
+
+      font-size: 17px;
+    }
+
+    /* ================= BUTTONS ================= */
+
+    .btn {
+      display: inline-block;
+
+      padding: 14px 25px;
+
+      margin: 7px;
+
+      border-radius: 6px;
+
+      background: #d7192d;
+
+      color: white;
+
+      font-weight: bold;
+
+      border: 1px solid #d7192d;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+
+      background: #b81426;
+    }
+
+    .btn-outline {
+      background: transparent;
+
+      border: 1px solid #555;
+    }
+
+    .btn-outline:hover {
+      border-color: #d7192d;
+      background: #d7192d;
+    }
+
+    /* ================= GENERAL SECTION ================= */
+
+    section {
+      max-width: 1150px;
+
+      margin: auto;
+
+      padding: 90px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 span {
+      color: #d7192d;
+    }
+
+    .section-title p {
+      color: #777;
+
+      margin-top: 8px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #111;
+
+      border: 1px solid #292929;
+
+      border-radius: 14px;
+
+      padding: 30px 25px;
+
+      text-align: center;
+
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+
+      border-color: #d7192d;
+    }
+
+    .service-icon {
+      font-size: 45px;
+
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #999;
+
+      font-size: 14px;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .gallery-card {
+      height: 240px;
+
+      border-radius: 14px;
+
+      border: 1px solid #292929;
+
+      background:
+        linear-gradient(
+          135deg,
+          #1c1c1c,
+          #090909
+        );
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 55px;
+
+      transition: 0.3s;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.02);
+
+      border-color: #d7192d;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+    }
+
+    .about-box {
+      background: #111;
+
+      border: 1px solid #292929;
+
+      border-radius: 15px;
+
+      padding: 32px;
+    }
+
+    .about-box h3 {
+      font-size: 25px;
+
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #999;
+    }
+
+    .features {
+      list-style: none;
+
+      margin-top: 10px;
+    }
+
+    .features li {
+      color: #aaa;
+
+      margin: 10px 0;
+    }
+
+    .features li::first-letter {
+      color: #d7192d;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      background: #111;
+
+      border: 1px solid #292929;
+
+      border-radius: 18px;
+
+      padding: 45px 25px;
+
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 35px;
+
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: #888;
+
+      margin-bottom: 20px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      text-align: center;
+
+      padding: 30px 20px;
+
+      color: #666;
+
+      border-top: 1px solid #222;
+
+      font-size: 13px;
+    }
+
+    footer span {
+      color: #d7192d;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 750px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-container {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 92vh;
+
+        padding-top: 110px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 14vw, 70px);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 65px 16px;
+      }
+
+      .services,
+      .gallery,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card {
+        height: 200px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .contact-box {
+        padding: 35px 18px;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 90%;
+        max-width: 320px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="logo">KREENA <span>TATTOO STUDIO</span></div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- ================= NAVBAR ================= -->
 
-    <!-- Hero / Home Section -->
-    <section class="hero">
-        <h1 style="font-size: 48px; margin-bottom: 15px; letter-spacing: 2px;">WHERE ART MEETS SKIN</h1>
-        <p style="color: #aaa; font-size: 18px; max-width: 600px;">Professional custom tattoos crafted with precision, creativity, and passion.</p>
-    </section>
+  <header class="navbar">
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <h2>OUR <span>SERVICES</span></h2>
-        <p class="subtitle">Created with precision, creativity and passion.</p>
-        <div class="cards-container">
-            <div class="card">
-                <h3>Custom Tattoos</h3>
-                <p>Unique tattoo designs created specially around your personality and story.</p>
-            </div>
-            <div class="card">
-                <h3>Fine Line</h3>
-                <p>Minimal, elegant and detailed tattoos with clean fine-line work.</p>
-            </div>
-            <div class="card">
-                <h3>Blackwork</h3>
-                <p>Bold black ink, strong contrast and powerful tattoo designs.</p>
-            </div>
+    <div class="nav-container">
+
+      <div class="logo">
+        KREENA <span>TATTOO STUDIO</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        INK • ART • YOUR STORY
+      </div>
+
+      <h1>
+        KREENA
+        <br>
+        <span>TATTOO STUDIO</span>
+      </h1>
+
+      <p class="hero-description">
+        Custom tattoos, fine line designs and bold blackwork —
+        turning your ideas into permanent art.
+      </p>
+
+      <a href="#contact" class="btn">
+        BOOK APPOINTMENT
+      </a>
+
+      <a href="#gallery" class="btn btn-outline">
+        VIEW OUR WORK
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SERVICES ================= -->
+
+  <section id="services">
+
+    <div class="section-title">
+
+      <h2>
+        OUR <span>SERVICES</span>
+      </h2>
+
+      <p>
+        Created with precision, creativity and passion.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🖋️
         </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <h2>OUR <span>GALLERY</span></h2>
-        <p class="subtitle">Check out our recent tattoo masterpieces.</p>
-        <p style="color: #666;">Gallery images coming soon...</p>
-    </section>
+        <h3>
+          Custom Tattoos
+        </h3>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>ABOUT <span>US</span></h2>
-        <p class="subtitle">Passionate artists dedicated to safety and perfection.</p>
-        <p style="color: #aaa; max-width: 700px; line-height: 1.6;">At Kreena Tattoo Studio, we treat every tattoo as a unique piece of art. Our studio maintains the highest standards of hygiene and sterilization, ensuring a safe and comfortable experience for every client.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>GET IN <span>TOUCH</span></h2>
-        <p class="subtitle">Book your appointment or drop by the studio.</p>
-        <p style="color: #aaa; line-height: 1.8;">
-            📍 Location: Main City Center<br>
-            📞 Phone: +91 XXXXX XXXXX<br>
-            ✉️ Email: info@kreenatattoostudio.com
+        <p>
+          Unique tattoo designs created specially
+          around your personality and story.
         </p>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Kreena Tattoo Studio. All rights reserved.</p>
-    </footer>
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🖤
+        </div>
+
+        <h3>
+          Fine Line
+        </h3>
+
+        <p>
+          Minimal, elegant and detailed tattoos
+          with clean fine-line work.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🔥
+        </div>
+
+        <h3>
+          Blackwork
+        </h3>
+
+        <p>
+          Bold black ink, strong contrast and
+          powerful tattoo designs.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= GALLERY ================= -->
+
+  <section id="gallery">
+
+    <div class="section-title">
+
+      <h2>
+        TATTOO <span>GALLERY</span>
+      </h2>
+
+      <p>
+        Some inspiration for your next tattoo.
+      </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <div class="gallery-card">
+        🖤
+      </div>
+
+      <div class="gallery-card">
+        🐍
+      </div>
+
+      <div class="gallery-card">
+        🌹
+      </div>
+
+      <div class="gallery-card">
+        🦋
+      </div>
+
+      <div class="gallery-card">
+        ☠️
+      </div>
+
+      <div class="gallery-card">
+        ⚡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <div class="about-box">
+
+        <h3>
+          About Kreena
+        </h3>
+
+        <p>
+          Welcome to Kreena Tattoo Studio — a creative
+          space where your ideas become permanent art.
+          Every tattoo is designed with attention to
+          detail, creativity and your personal style.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <h3>
+          Why Choose Us?
+        </h3>
+
+        <ul class="features">
+
+          <li>
+            ✓ Custom tattoo designs
+          </li>
+
+          <li>
+            ✓ Professional approach
+          </li>
+
+          <li>
+            ✓ Clean & hygienic setup
+          </li>
+
+          <li>
+            ✓ Personal consultation
+          </li>
+
+          <li>
+            ✓ Appointment based service
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <div class="contact-box">
+
+      <h2>
+        READY TO GET INKED?
+      </h2>
+
+      <p>
+        Have an idea? Let's turn it into something permanent.
+      </p>
+
+
+      <!-- Replace these links with actual details -->
+
+      <a
+        href="https://wa.me/"
+        target="_blank"
+        class="btn"
+      >
+        💬 WhatsApp
+      </a>
+
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        class="btn btn-outline"
+      >
+        📷 Instagram
+      </a>
+
+
+      <p style="font-size:12px;margin-top:20px;">
+        Replace the WhatsApp and Instagram links
+        with the studio's real details.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026
+    <span>Kreena Tattoo Studio</span>
+    • Ink Your Story 🖤
+
+  </footer>
+
 
 </body>
 </html>
